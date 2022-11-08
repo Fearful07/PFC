@@ -55,3 +55,14 @@ def calculSalaireNet(salaireBrut, public):
         return withdrawFees(salaireBrut,23)
 
 print(calculSalaireNet(2000,True))
+
+nbPersonne = x
+
+if nbPersonne == 1:
+    tuRentre()
+elif nbPersonne == 3:
+    tuRentre()
+elif nbPersonne == 5:
+    tuRentre()
+else:
+    tuRentrePas
