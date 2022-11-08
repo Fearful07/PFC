@@ -149,13 +149,47 @@ tableau = [0,1,1,1,0,1,1,0,1]
 #la fonction(tableau,0) doit renvoyer "0 , 4, 7"
 
 def index(tableau,chiffre):
+    #on crée une variable de type string vide
     index = ""
+    #on parcours les index de tous le tableau
     for i in range(len(tableau)):
+        # si le chiffre du tableau est égale a notre chiffre
         if tableau[i] == chiffre:
+            # si la variable est toujours vide 
             if index == "":
+                #on met comme premier valeur l'index de notre premier chiffre pour éviter un blanc
                 index = str(i)
+            #sinon
             else:
+                #on ajouter a index tous les index qui corresponde grace a la fonction concatene crée au dessus
                 index = concatene(index, str(i))
     return index
 print(index(tableau,0))
 
+tableauCleVal = {"Cle" : "Valeur"}
+tableauCleVal["Cle"] # Renvoie "valeur"
+
+# foreach key: valeur in tableauCleVal
+#     print(key) #Renvoie "Cle"
+#     print(valeur) #Renvoie "Valeur"
+
+#Exercice 3 
+#faire une foction afficher un message
+def afficher(text):
+    print(text)
+print(afficher("aaaa"))
+
+listeUtilisateur = {
+    "Johann" : "motdepasse",
+    "Michel" : "password",
+    "Toto" : "12345",
+    "JhonDoe" : "azerty"
+}
+#Ecrivez la fonction login(userName, password, listUser) permettant d'afficher un message de connexion si le combo user/password est bon
+
+def login(userName, password, listUser):
+    for i in listUser:
+        if userName == i and password == listUser[i]:
+            print("Vous êtes connecté")
+        return 
+login("Johann","motdepasse", listeUtilisateur)
