@@ -30,9 +30,28 @@ print(revenuSeconde(2000,17,303))
 
 def salaireNet(prc,salaireBrut):
     #mise en pourcentage 
-    pourcentage = prc/100
+    percent = prc/100
     # calcul de la reduction à appliqué
-    redu = pourcentage*salaireBrut 
+    redu = percent*salaireBrut 
     # on soustrait le salaire brut au salaire 
     return salaireBrut - redu
-print(salaireNet(25,2000))
+print(salaireNet(23,2000))
+
+
+def withdrawFees(total, percent):
+    #calcul du montant des taxes a retirer
+    fees = total * (percent / 100)
+    # Je retourne mon total sans les taxes
+    return total - fees
+
+def calculSalaireNet(salaireBrut, public):
+    #Si j'occupe un poste de la fonction publique
+    if public:
+    #Alors je retourne le salaire brut - 15% de taxes
+        return withdrawFees(salaireBrut,15)
+    #Sinon c'est que je suis un travailleur privé,
+    else:
+    #Alors je retourne le salaire brut - 23% de douille bien a l'ancienne
+        return withdrawFees(salaireBrut,23)
+
+print(calculSalaireNet(2000,True))
