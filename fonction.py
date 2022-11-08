@@ -65,4 +65,4 @@ elif nbPersonne == 3:
 elif nbPersonne == 5:
     tuRentre()
 else:
-    tuRentrePas
+    tuRentrePas()
