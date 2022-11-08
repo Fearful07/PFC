@@ -29,6 +29,10 @@ def revenuSeconde(salaireHeure, heureJourOuvrable, jourOuvrable):
 print(revenuSeconde(2000,17,303))
 
 def salaireNet(prc,salaireBrut):
-    pourcent = prc/100 #mise en pourcentage 
-    return salaireBrut - (pourcent * salaireBrut)
+    #mise en pourcentage 
+    pourcentage = prc/100
+    # calcul de la reduction à appliqué
+    redu = pourcentage*salaireBrut 
+    # on soustrait le salaire brut au salaire 
+    return salaireBrut - redu
 print(salaireNet(25,2000))
