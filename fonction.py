@@ -177,7 +177,7 @@ tableauCleVal["Cle"] # Renvoie "valeur"
 #faire une foction afficher un message
 def afficher(text):
     print(text)
-print(afficher("aaaa"))
+afficher("aaaa")
 
 listeUtilisateur = {
     "Johann" : "motdepasse",
@@ -191,5 +191,6 @@ def login(userName, password, listUser):
     for i in listUser:
         if userName == i and password == listUser[i]:
             print("Vous êtes connecté")
-        return 
+            return 
+    print("Erreur, veuillez réessayer")
 login("Johann","motdepasse", listeUtilisateur)
