@@ -68,18 +68,18 @@ def calculSalaireNet(salaireBrut, public):
 
 print(calculSalaireNet(2000,True))
 
-nbPersonne = x
+# nbPersonne = x
 
-if nbPersonne == 1:
-    tuRentre()
-elif nbPersonne == 3:
-    tuRentre()
-elif nbPersonne == 5:
-    tuRentre()
-else:
-    tuRentrePas()
+# if nbPersonne == 1:
+#     tuRentre()
+# elif nbPersonne == 3:
+#     tuRentre()
+# elif nbPersonne == 5:
+#     tuRentre()
+# else:
+#     tuRentrePas()
 
-#------------------Exercice 3 : Les BOUCLES-------------------
+# #------------------Exercice 3 : Les BOUCLES-------------------
 # tour = 0
 # # Tant que je ne suis pas au tour 5
 # while tour != 5 :
@@ -88,3 +88,36 @@ else:
 # # J'effectue l'action de passer un tour
 #     tour = tour + 1
 
+#def input():
+    #Renvoie un caractere de type string au hasard
+#Exercice:
+    #faire un mini jeu qui affiche un message lorsque input renvoie le bon caractere
+    #le caractere doit etre parametrable
+
+#def bonCaractere(caractere):
+    #on recupere un caractere aleatoire
+    #inputCara = input()
+    # compararer caractere avec inputCara
+    #si les caractere sont les meme 
+    # print victoire
+    #et return rien
+    #sinon 
+    # tant que c'est perdu recommencer
+
+#def bonCaractere(caractere):
+    # On recupere un caractere aleatoire
+    #inputCara = input()
+    #tant que nos deux caractere ne sont pas égale
+    # while inputCara != caractere 
+        # Nouveau caractere importé
+        # inputCara = input()
+    #print("réussi")
+
+
+#def
+#  bonCaractere(caractere, nombreEssais=0):
+    #inputCara = input()
+    #if inputCara != caractere:
+        #return bonCaractere(caractere,nombreEssais+1)
+    #print("victoire")
+    #return
