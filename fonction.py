@@ -11,8 +11,15 @@ def multiply (x,y):
 print(multiply(3,5))
 
 def divide (x,y):
-    return x/y
-print(divide(3,5))
+    #si y == 0
+    if y == 0:
+    #alors on retourne pas possible 
+        return "Il faut un y superieur à 0"
+    #Sinon on retourne x/y
+    else:
+        return x/y
+   
+print(divide(3,0))
 
 def modulo (x,y):
     return x%y
@@ -37,7 +44,6 @@ def salaireNet(prc,salaireBrut):
     return salaireBrut - redu
 print(salaireNet(23,2000))
 
-
 def withdrawFees(total, percent):
     #calcul du montant des taxes a retirer
     fees = total * (percent / 100)
@@ -56,13 +62,13 @@ def calculSalaireNet(salaireBrut, public):
 
 print(calculSalaireNet(2000,True))
 
-nbPersonne = x
+# nbPersonne = x
 
-if nbPersonne == 1:
-    tuRentre()
-elif nbPersonne == 3:
-    tuRentre()
-elif nbPersonne == 5:
-    tuRentre()
-else:
-    tuRentrePas()
+# if nbPersonne == 1:
+#     tuRentre()
+# elif nbPersonne == 3:
+#     tuRentre()
+# elif nbPersonne == 5:
+#     tuRentre()
+# else:
+#     tuRentrePas()
