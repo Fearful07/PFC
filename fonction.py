@@ -1,3 +1,4 @@
+#------------------Exercice 1-------------------
 def add (x,y):
     return x+y
 print(add(3,5))
@@ -25,6 +26,8 @@ print(divide(3,0))
 def modulo (x,y):
     return x%y
 print(modulo(3,5))
+
+#------------------Exercice 2-------------------
 
 def revenuSeconde(salaireHeure, heureJourOuvrable, jourOuvrable):
     # je calcul le salaire annuel
@@ -63,13 +66,13 @@ def calculSalaireNet(salaireBrut, public):
 
 print(calculSalaireNet(2000,True))
 
-# nbPersonne = x
+nbPersonne = x
 
-# if nbPersonne == 1:
-#     tuRentre()
-# elif nbPersonne == 3:
-#     tuRentre()
-# elif nbPersonne == 5:
-#     tuRentre()
-# else:
-#     tuRentrePas()
+if nbPersonne == 1:
+    tuRentre()
+elif nbPersonne == 3:
+    tuRentre()
+elif nbPersonne == 5:
+    tuRentre()
+else:
+    tuRentrePas()
