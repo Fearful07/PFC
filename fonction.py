@@ -121,3 +121,41 @@ print(calculSalaireNet(2000,True))
         #return bonCaractere(caractere,nombreEssais+1)
     #print("victoire")
     #return
+
+tab = [0,10,15,5,14,7,6,3,4,8,4,9,5,1,7,5,2,1,8,4,4,6,8]
+i = 0
+#Pour recuperer 15 je prend dans tableau l'index 3 - 1
+print(tab[2])
+
+len(tab) #Renvoie la longueur de tableau
+
+prenom = "Johann"
+nom = "Bois"
+
+nomPrenom = nom + prenom #renvoie BoisJohann
+nomPrenom = nom + " " + prenom #renvoie Bois Johann
+integerValue = 342
+strinInterValue = str(342) #Renvoie "342" au lieu de 342
+#Exercice
+#Faire une fonction qui concatene 2 chaine de caractere, les séparants par une virgule
+def concatene(mot1,mot2):
+    return mot1 + ", " + mot2
+print(concatene("Bois","Johann"))
+
+#Exercice 2
+#Faire une fonction qui itere sur tous les index d'un tableau renvoyant une chaine de caractere
+#avec l'ensemble des occuration d'un chiffre e.g.:
+tableau = [0,1,1,1,0,1,1,0,1]
+#la fonction(tableau,0) doit renvoyer "0 , 4, 7"
+
+def index(tableau,chiffre):
+    index = ""
+    for i in range(len(tableau)):
+        if tableau[i] == chiffre:
+            if index == "":
+                index = str(i)
+            else:
+                index = concatene(index, str(i))
+    return index
+print(index(tableau,0))
+
