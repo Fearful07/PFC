@@ -13,11 +13,12 @@ print(multiply(3,5))
 def divide (x,y):
     #si y == 0
     if y == 0:
-    #alors on retourne pas possible 
-        return "Il faut un y superieur à 0"
+        #alors on afficher le message pas possible 
+        print("Il faut un y superieur à 0")
+        #et renvoyer rien
+        return 
     #Sinon on retourne x/y
-    else:
-        return x/y
+    return x/y
    
 print(divide(3,0))
 
