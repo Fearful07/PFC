@@ -137,21 +137,26 @@
 # integerValue = 342
 # strinInterValue = str(342) #Renvoie "342" au lieu de 342
 # #Exercice
-# #Faire une fonction qui concatene 2 chaine de caractere, les séparants par une virgule
-# def concatene(mot1,mot2):
-#     return mot1 + ", " + mot2
-# print(concatene("Bois","Johann"))
+# #Faire une fonction qui concatene 2 chaine de caractere, les séparants par une virgule 
+# définir une fonction avec comme parametres : chaineA et chaineB
+    #je m'assure que chaineA soit bien de tyoe str
+    #je m'assure que chaineB soit bien de tyoe str
+    #Retourner chaineA concatené avec un comma et chaineB
+def concatene(mot1,mot2):
+    return mot1 + ", " + mot2
+print(concatene("Bois","Johann"))
 
 # #Exercice 2
 # #Faire une fonction qui itere sur tous les index d'un tableau renvoyant une chaine de caractere
 # #avec l'ensemble des occuration d'un chiffre e.g.:
-# tableau = [0,1,1,1,0,1,1,0,1]
+tableau = [0,1,1,1,0,1,1,0,1]
 # #la fonction(tableau,0) doit renvoyer "0 , 4, 7"
+
 
 # def index(tableau,chiffre):
 #     #on crée une variable de type string vide
 #     index = ""
-#     #on parcours les index de tous le tableau
+#     #Pour tout les index de tableau
 #     for i in range(len(tableau)):
 #         # si le chiffre du tableau est égale a notre chiffre
 #         if tableau[i] == chiffre:
@@ -165,6 +170,34 @@
 #                 index = concatene(index, str(i))
 #     return index
 # print(index(tableau,0))
+
+#"""""""""""""""""""Correction"""""""""""""""""
+# # Definir une fonction qui prend une liste tableau et une variable x quelconque
+# def indexTab(tableau,x):
+#     #Initialiser i a 0
+#     i=0
+#     #Definir chaineResultat en tant que string vide
+#     chaineResultat = ""
+#     #On determine firsTurn a true 
+#     firsTurn = True
+#     #Tant que i est inferieur a la longueur de tableau
+#     while i < len(tableau):
+#         #si l'elt d'index i de tableau est egal a x
+#         if tableau[i] == x:
+#             #Si je suis au premier tour ( firstTurn est true )
+#             if firsTurn:
+#                 #Alors j'assigne str(i) a chaineResultat
+#                 chaineResultat = str(i)  
+#                 #on passe firsTurn a false
+#                 firsTurn = False 
+#             #sinon on assigne a chaine resultat le retour de concatWithComma(chaineResultat, str(i))
+#             else:
+#                 chaineResultat = concatene(chaineResultat,str(i))
+#         #on incremente i de 1
+#         i = i + 1
+#     #Retourner chaineResultat
+#     return chaineResultat
+# print(indexTab(tableau,0))
 
 # tableauCleVal = {"Cle" : "Valeur"}
 # tableauCleVal["Cle"] # Renvoie "valeur"
@@ -195,45 +228,63 @@
 #     print("Erreur, veuillez réessayer")
 # login("Johann","motdepasse", listeUtilisateur)
 
+#============correction ==================
+# #definir une fonction login avec comme parametre userName, password, lisUser
+# def login(userName,password,listUser):
+#     #si userName est egale a password
+#     if listUser[userName] == password:
+#         #retourner login connecte
+#         return "Connecté"
+#     #sinon
+#     else:
+#         #retourner erreur
+#         return "erreur"
+
 
 # def fibonacci(xdebut,lenMax):
-#     pour chaque valeur jusqu'à lenMax
+#     #pour chaque valeur jusqu'à lenMax
 #     for i in range(lenMax):
-          #Si on es a la premiere valeur
+#         #Si on es a la premiere valeur
 #         if i == 0:
-              #alors suite commence par 0
+#             #alors suite commence par 0
 #             suite = "0"
-          #Sinon si on es a la deuxieme valeur
+#         #Sinon si on es a la deuxieme valeur
 #         elif i == 1:
-              #alors on ecrit la valeur de xDebut dans la variable de fin
+#             #alors on ecrit la valeur de xDebut dans la variable de fin
 #             suite = concatene(suite, str(xdebut))
-              # je stock ma premiere valeur
+#             #je stock ma premiere valeur
 #             stock = 0
 #         else:
-              #j'aditionne les deux derniere valeur et les met dans une variable
+#             #j'aditionne les deux derniere valeur et les met dans une variable
 #             xdebut = xdebut + stock
-              #je la valeur precedente 
+#             #je la valeur precedente 
 #             stock = xdebut - stock
-              #on ecrit la valeur qui se trouve dans xdebut a la fin 
+#             #on ecrit la valeur qui se trouve dans xdebut a la fin 
 #             suite = concatene(suite, str(xdebut))
-      #je retourne le resultat
+#     #je retourne le resultat
 #     return suite
 # print(fibonacci(1,15))  
 import random
 
 
-def tab2Dim(lenTab):
-    tab=[]
-    for i in range(lenTab):
-        tab.append([])
-    for i in range(lenTab):
-        for j in range(lenTab):
-            tab[j].append(random.randint(0,10))
-    return tab    
-print(tab2Dim(5))
+# def tab2Dim(lenTab):
+#     tab=[]
+#     for i in range(lenTab):
+#         tab.append([])
+#     for i in range(lenTab):
+#         for j in range(lenTab):
+#             tab[j].append(random.randint(0,10))
+#     return tab    
+# print(tab2Dim(5))
 
-def adjacent(tab):
-    for i in range(len(tab)):
-        for j in range(len(tab)):
-            if i == 0 and j == 0:
-                if 
+# def adjacent(coord1, coord2, tab):
+#     for i in range(len(tab) -1):
+#         for j in range(len(tab) -1):
+#             if tab[coord1[0]][coord1[1]] == tab[coord2[0]][coord2[1]-1] or \
+#             tab [coord1[0]][coord1[1]] == tab[coord2[0] - 1][coord2[1]] or \
+#             tab [coord1[0]][coord1[1]] == tab[coord2[0] + 1][coord2[1]] or \
+#             tab [coord1[0]][coord1[1]] == tab[coord2[0]][coord2[1] + 1]:
+#                 print("oui")
+#                 return 
+#     print("non")
+# adjacent([2,3], [3,4], tab2Dim(5))
