@@ -138,8 +138,8 @@
 # strinInterValue = str(342) #Renvoie "342" au lieu de 342
 # #Exercice
 # #Faire une fonction qui concatene 2 chaine de caractere, les séparants par une virgule
-def concatene(mot1,mot2):
-    return mot1 + ", " + mot2
+# def concatene(mot1,mot2):
+#     return mot1 + ", " + mot2
 # print(concatene("Bois","Johann"))
 
 # #Exercice 2
@@ -196,16 +196,26 @@ def concatene(mot1,mot2):
 # login("Johann","motdepasse", listeUtilisateur)
 
 
-def fibonacci(xdebut,lenMax):
+# def fibonacci(xdebut,lenMax):
+#     pour chaque valeur jusqu'à lenMax
 #     for i in range(lenMax):
+          #Si on es a la premiere valeur
 #         if i == 0:
+              #alors suite commence par 0
 #             suite = "0"
+          #Sinon si on es a la deuxieme valeur
 #         elif i == 1:
+              #alors on ecrit la valeur de xDebut dans la variable de fin
+#             suite = concatene(suite, str(xdebut))
+              # je stock ma premiere valeur
 #             stock = 0
-#             suite = concatene(suite, str(xdebut))
 #         else:
+              #j'aditionne les deux derniere valeur et les met dans une variable
 #             xdebut = xdebut + stock
+              #je la valeur precedente 
 #             stock = xdebut - stock
+              #on ecrit la valeur qui se trouve dans xdebut a la fin 
 #             suite = concatene(suite, str(xdebut))
+      #je retourne le resultat
 #     return suite
 # print(fibonacci(1,15))  
