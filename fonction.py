@@ -266,25 +266,24 @@ tableau = [0,1,1,1,0,1,1,0,1]
 # print(fibonacci(1,15))  
 import random
 
+def tab2Dim(lenTab):
+    tab=[]
+    for i in range(lenTab):
+        tab.append([])
+    for i in range(lenTab):
+        for j in range(lenTab):
+            tab[j].append(random.randint(0,10))
+    return tab    
+print(tab2Dim(5))
 
-# def tab2Dim(lenTab):
-#     tab=[]
-#     for i in range(lenTab):
-#         tab.append([])
-#     for i in range(lenTab):
-#         for j in range(lenTab):
-#             tab[j].append(random.randint(0,10))
-#     return tab    
-# print(tab2Dim(5))
-
-# def adjacent(coord1, coord2, tab):
-#     for i in range(len(tab) -1):
-#         for j in range(len(tab) -1):
-#             if tab[coord1[0]][coord1[1]] == tab[coord2[0]][coord2[1]-1] or \
-#             tab [coord1[0]][coord1[1]] == tab[coord2[0] - 1][coord2[1]] or \
-#             tab [coord1[0]][coord1[1]] == tab[coord2[0] + 1][coord2[1]] or \
-#             tab [coord1[0]][coord1[1]] == tab[coord2[0]][coord2[1] + 1]:
-#                 print("oui")
-#                 return 
-#     print("non")
-# adjacent([2,3], [3,4], tab2Dim(5))
+def adjacent(coord1, coord2, tab):
+    for i in range(len(tab) -1):
+        for j in range(len(tab) -1):
+            if tab[coord1[0]][coord1[1]] == tab[coord2[0]][coord2[1]-1] or \
+            tab [coord1[0]][coord1[1]] == tab[coord2[0] - 1][coord2[1]] or \
+            tab [coord1[0]][coord1[1]] == tab[coord2[0] + 1][coord2[1]] or \
+            tab [coord1[0]][coord1[1]] == tab[coord2[0]][coord2[1] + 1]:
+                print("oui")
+                return 
+    print("non")
+adjacent([2,3], [3,4], tab2Dim(5))
