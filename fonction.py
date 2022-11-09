@@ -219,3 +219,21 @@
       #je retourne le resultat
 #     return suite
 # print(fibonacci(1,15))  
+import random
+
+
+def tab2Dim(lenTab):
+    tab=[]
+    for i in range(lenTab):
+        tab.append([])
+    for i in range(lenTab):
+        for j in range(lenTab):
+            tab[j].append(random.randint(0,10))
+    return tab    
+print(tab2Dim(5))
+
+def adjacent(tab):
+    for i in range(len(tab)):
+        for j in range(len(tab)):
+            if i == 0 and j == 0:
+                if 
