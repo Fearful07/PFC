@@ -263,7 +263,12 @@ tableau = [0,1,1,1,0,1,1,0,1]
 #             suite = concatene(suite, str(xdebut))
 #     #je retourne le resultat
 #     return suite
-# print(fibonacci(1,15))  
+# print(fibonacci(1,15)) 
+
+#"""""""""""""""Correction"""""""""""""""""
+
+
+
 import random
 
 def tab2Dim(lenTab):
@@ -277,13 +282,15 @@ def tab2Dim(lenTab):
 print(tab2Dim(5))
 
 def adjacent(coord1, coord2, tab):
-    for i in range(len(tab) -1):
-        for j in range(len(tab) -1):
+    for _ in range(len(tab) -1):
+        for _ in range(len(tab) -1):
             if tab[coord1[0]][coord1[1]] == tab[coord2[0]][coord2[1]-1] or \
             tab [coord1[0]][coord1[1]] == tab[coord2[0] - 1][coord2[1]] or \
             tab [coord1[0]][coord1[1]] == tab[coord2[0] + 1][coord2[1]] or \
             tab [coord1[0]][coord1[1]] == tab[coord2[0]][coord2[1] + 1]:
+            
                 print("oui")
                 return 
     print("non")
 adjacent([2,3], [3,4], tab2Dim(5))
+
