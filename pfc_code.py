@@ -27,30 +27,45 @@ def pierreFeuilleCiseau():
 #         assigne a la variable une liste choice qui comprend Pierre, Feuille et Ciseau
         choice = ["Pierre", "Feuille", "Ciseau"]
 #         Assigne à la variable choixBot la correspondance du retour de l'execution de random avec comme parametre(0,2) dans la liste choice
-        choixBot = random.randint(choice(0,2)
+        choixBot = choice[random.randint(0,2)]
 #         Si le choixJoueur est égale a pierre et le choixBot est égale a ciseau
+        if choixJoueur == "Pierre" and choixBot == "Ciseau" or choixJoueur == "Feuille" and choixBot == "Pierre" or choixJoueur == "Ciseau" and choixBot == "Feuille":
 #         ou le choixJoueur est égale a feuille et le choixBot est égale a pierre 
 #         ou le choixJoueur est égale a ciseau et le choixBot est égale a feuille
 #             alors
 #             on ajoute 1 a la variable scoreJoueur
+            scoreJoueur = scoreJoueur + 1
 #             affiche Gagner le score est : avec le (scoreJoueur - le scoreBot)
+            print(f"Gagner le score est : {scoreJoueur} - {scoreBot}")
 #         Sinon si le choixJoueur est egal au choixBot
+        elif choixJoueur == choixBot:
 #             alors 
 #             affiche égalité
+            print("Egalité")
 #         Sinon
+        else:
 #             alors
 #             on ajoute 1 a la variable scoreBot 
+            scoreBot +=1
 #             affiche Perdu le score est : avec le (scoreJoueur - le scoreBot)
+            print(f"Perdu le score est : {scoreJoueur} - {scoreBot}")
 #     Si le scoreJoueur est égale a la variable bestOff
+    if scoreJoueur == bestOff:
 #         alors afficher Victoire, Fin de la partie et la variable nbRound
+        print("Victoire, Fin de la partie avec ", nbRound, " round joué")
 #     Sinon
+    else:
 #         afficher Défaite, Fin de la partie et la variable nbRound
-            
+        print("Victoire, Fin de la partie avec ", nbRound, " round joué")         
 #     assigne a la variable restart le retour de l'execution de la fonction input avec en parametre le message("Voulez vous recommencer ? ")
+    restart = input("Voulez vous recommencer ? ")
 #     si le restart est égal a "oui"
+    if restart == "oui":
 #         alors on réexécute la fonction pierreFeuilleCiseau()
+        pierreFeuilleCiseau()
 
-# Execution de la fonction pierreFeuilleCiseau()       
+# Execution de la fonction pierreFeuilleCiseau()
+pierreFeuilleCiseau()       
 # FIN
 
 
