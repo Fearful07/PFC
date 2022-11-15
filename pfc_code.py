@@ -56,7 +56,7 @@ def pierreFeuilleCiseau():
 #     Sinon
     else:
 #         afficher Défaite, Fin de la partie et la variable nbRound
-        print("Victoire, Fin de la partie avec ", nbRound, " round joué")         
+        print("Perdu, Fin de la partie avec ", nbRound, " round joué")         
 #     assigne a la variable restart le retour de l'execution de la fonction input avec en parametre le message("Voulez vous recommencer ? ")
     restart = input("Voulez vous recommencer ? ")
 #     si le restart est égal a "oui"
@@ -67,7 +67,3 @@ def pierreFeuilleCiseau():
 # Execution de la fonction pierreFeuilleCiseau()
 pierreFeuilleCiseau()       
 # FIN
-
-
-
-
